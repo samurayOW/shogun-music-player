@@ -41,6 +41,16 @@
     z-index: 999;
 }
 
+.player__slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    border-radius: 0%;
+    box-shadow: -407px 0 0 400px #fff;
+    z-index: 999;
+}
 
 body {
     min-width: 100vw;
@@ -132,6 +142,7 @@ body {
     background-color: #ffffff24;
     border-radius: 10px;
     box-shadow: 3px 1px 15px 0px #fff;
+    /* scrollbar-color: #fff transparent; */
 }
 
 .playlist::-webkit-scrollbar {
