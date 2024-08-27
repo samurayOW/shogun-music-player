@@ -69,7 +69,7 @@ export const switchTrack = function (back = false, updateInfo, updateProgressSli
     });
 
     play();
-    trackEndedHandler(updateInfo, updateProgressSlider, updateProgressStart);
+    // trackEndedHandler(updateInfo, updateProgressSlider, updateProgressStart);
 };
 
 export const trackEndedHandler = function (updateInfo, updateProgressSlider, updateProgressStart) {

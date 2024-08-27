@@ -30,7 +30,7 @@ const controlSelectTrack = async function (data) {
         const selectedTrack = model.state.playlist.filter(track => track.id == data)[0];
         selectTrackView.updateCurrentTrackInfo(selectedTrack, model.trackEndedHandler);
 
-        model.trackEndedHandler(selectTrackView.updateCurrentTrackInfo, controlsPlayerView.progressSliderHandler, controlsPlayerView.updateProgressStart);
+        // model.trackEndedHandler(selectTrackView.updateCurrentTrackInfo, controlsPlayerView.progressSliderHandler, controlsPlayerView.updateProgressStart);
 
     } catch (err) {
         console.log(err);
@@ -51,6 +51,8 @@ const controlControlsPlayer = function () {
 };
 
 const init = function () {
+    model.trackEndedHandler(selectTrackView.updateCurrentTrackInfo, controlsPlayerView.progressSliderHandler, controlsPlayerView.updateProgressStart);
+
     loadPlaylistView.addHandler(controlLoadPlaylist);
     selectTrackView.addHandler(controlSelectTrack);
     controlsPlayerView.addHandler(controlControlsPlayer);
